@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace UnicodeSlug
 {
-    public class UnicodeSlug
+    public class SlugOptions
     {
-        public UnicodeSlug()
+        public SlugOptions()
         {
             AllowedChars = new char[] { '-', '_', '~' };
             Lowercase = true;
@@ -48,7 +48,7 @@ namespace UnicodeSlug
         public bool Lowercase { get; set; }
         public bool Spaces { get; set; }
 
-        public string Generate(string str)
+        public string GenerateSlug(string str)
         {
             str = str.Normalize(NormalizationForm.FormKC);
             var builder = new StringBuilder();
@@ -85,10 +85,16 @@ namespace UnicodeSlug
             // collapse spaces
             slug = Regex.Replace(slug, @"\s+", " ");
 
-            // replace spaces with hypens
-            slug = Regex.Replace(slug, @"[\s\-]+", "-");
+            if (!Spaces)
+            {
+                // replace spaces with hypens
+                slug = Regex.Replace(slug, @"[\s\-]+", "-");
+            }
 
-            slug = slug.ToLowerInvariant();
+            if (Lowercase)
+            {
+                slug = slug.ToLowerInvariant();
+            }
 
             return slug;
         }
