@@ -28,7 +28,7 @@ var slugOptionsChars = new SlugOptions
 };
 slugOptionsCasing.GenerateSlug("Y U NO") // "Y-U-NO"
 slugOptionsSpaces.GenerateSlug("Y U NO") // "y u no"
-slugOptionsChars.GenerateSlug("Y-U|NO") // "yu|no""
+slugOptionsChars.GenerateSlug("Y-U|NO") // "yu|no"
 ```
 
 ## Installation
