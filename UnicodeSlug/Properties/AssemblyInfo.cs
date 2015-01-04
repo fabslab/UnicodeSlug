@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("UnicodeSlug")]
 [assembly: AssemblyDescription("A permissive slug generator that works with unicode.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Fabien Brooke")]
 [assembly: AssemblyProduct("UnicodeSlug")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]

@@ -12,7 +12,7 @@ namespace UnicodeSlug
     {
         public SlugOptions()
         {
-            AllowedChars = new char[] { '-', '_', '~' };
+            AllowedChars = new [] { '-', '_', '~' };
             Lowercase = true;
             Spaces = false;
         }
